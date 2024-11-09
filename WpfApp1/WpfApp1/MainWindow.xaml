@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1600">
+    <Grid Height="890" VerticalAlignment="Top">
+        <Image x:Name="Origin_Image" HorizontalAlignment="Left" Height="275" Margin="117,38,0,0" VerticalAlignment="Top" Width="279"/>
+        <Image x:Name="after_Image" HorizontalAlignment="Left" Height="297" Margin="447,77,0,0" VerticalAlignment="Top" Width="382"/>
+        <Button Content="選擇圖片" HorizontalAlignment="Left" Click="UploadImageButton_Click" Height="27" Width="110" Margin="116,362,0,501" RenderTransformOrigin="-5.025,-4.679"/>
+        <Slider HorizontalAlignment="Left" Margin="505,38,0,0" VerticalAlignment="Top" Width="286" ValueChanged="Slider_ValueChanged" RenderTransformOrigin="0.299,-0.886" Maximum="255" LargeChange="5"/>
+        <Button x:Name="灰階轉換" Content="灰階轉換" HorizontalAlignment="Left" Height="27" Margin="116,415,0,0" VerticalAlignment="Top" Width="110" Click="Grayscale_conversion"/>
+        <Button Content="三通道轉換" HorizontalAlignment="Left" Margin="116,462,0,0" VerticalAlignment="Top" Width="110" Height="26" Click="Channel_onversion"/>
+        <Image x:Name="Image_R" HorizontalAlignment="Left" Height="172" Margin="558,449,0,0" VerticalAlignment="Top" Width="191" OpacityMask="#FFC51F1F"/>
+        <Image x:Name="Image_G" HorizontalAlignment="Left" Height="172" Margin="840,449,0,0" VerticalAlignment="Top" Width="191"/>
+        <Image x:Name="Image_B" HorizontalAlignment="Left" Height="172" Margin="1118,449,0,0" VerticalAlignment="Top" Width="191"/>
+        <TextBox TextWrapping="Wrap" Text="三通道R&#xD;&#xA;"  Margin="583,653,890,201" FontSize="24"/>
+        <TextBox TextWrapping="Wrap" Text="三通道G&#xA;"  Margin="869,653,582,201" FontSize="24"/>
+        <TextBox TextWrapping="Wrap" Text="三通道B&#xA;"  Margin="1158,653,293,201" FontSize="24"/>
+        <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Margin="563,10,0,0" TextWrapping="Wrap" Text="閥值 :" VerticalAlignment="Top" Width="120" />
+        <Button Content="侵蝕擴張" HorizontalAlignment="Left" Margin="116,521,0,0" VerticalAlignment="Top" Height="31" Width="110" Click="Erosion_Expansion"/>
+        <Image x:Name="Expansion_Image"  HorizontalAlignment="Left" Height="299" Margin="956,77,0,0" VerticalAlignment="Top" Width="364"/>
+        <Button Content="去雜訊" HorizontalAlignment="Left" Margin="116,585,0,0" VerticalAlignment="Top" Width="110" Height="35" Click="Denoise"/>
+        <Button Content="銳化" HorizontalAlignment="Left" Height="36" Margin="116,653,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click"/>
+        <Button Content="邊界" HorizontalAlignment="Left" Margin="117,720,0,0" VerticalAlignment="Top" Width="109" Height="38" Click="edge"/>
+        <Button Content="值方圖等化" HorizontalAlignment="Left" Margin="299,415,0,0" VerticalAlignment="Top" Height="27" Width="90" Click="Histogram_equalization"/>
+        <Button Content="旋轉" HorizontalAlignment="Left" Margin="299,462,0,0" VerticalAlignment="Top" Height="26" Width="90" Click="Button_Click_1"/>
+    </Grid>
+</Window>
